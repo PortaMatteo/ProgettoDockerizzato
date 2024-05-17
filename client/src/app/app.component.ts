@@ -11,7 +11,7 @@ export class AppComponent {
   data: any;
   constructor(private http: HttpClient)
   {
-    this.http.get("https://5000-portamatteo-progettodoc-2clxqe14jhh.ws-eu111.gitpod.io/simple_json")
+    this.http.get("https://5000-portamatteo-progettodoc-olevebvz9r5.ws-eu111.gitpod.io/simple_json")
     .subscribe(
       (data) => 
         {
