@@ -1,5 +1,13 @@
 version: '3.7'
 services:
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - 8080:8080
+    
   client:
       build:
         dockerfile: Dockerfile
@@ -13,7 +21,7 @@ services:
         - ./client:/app
       ports:
         - 4200:4200
-  server:
+  api-server:
       build:
         dockerfile: Dockerfile
         context: ./server
